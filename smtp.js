@@ -1,24 +1,16 @@
-$(document).ready(function () {
-    $("form").submit(function (event) {
-      var formData = {
-        name: $("#name").val(),
-        email: $("#email").val(),
-        superheroAlias: $("#superheroAlias").val(),
-      };
-  
-      $.ajax({
-        type: "POST",
-        url: "process.php",
-        data: formData,
-        dataType: "json",
-        encode: true,
-      }).done(function (data) {
-        console.log(data);
-      });
-  
-      event.preventDefault();
-    });
+$("#my_form").submit(function(event){
+  event.preventDefault(); //prevent default action 
+  var post_url = ""; //get form action url
+  var request_method = $(this).attr("post"); //get form GET/POST method
+var form_data = new FormData(this); //Creates new FormData object
+  $.ajax({
+      url : post_url,
+      type: request_method,
+      data : form_data,
+  contentType: false,
+  cache: false,
+  processData:false
+  }).done(function(response){ //
+      $("#server-results").html(response);
   });
-
-  
-
+});
