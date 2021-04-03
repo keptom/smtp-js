@@ -4,7 +4,7 @@
       type: "POST",
       url: "http://www.smtp-js.us/smtp-js.php",
       crossDomain: true,
-      data: 'sbj=subject&sender=sendername&message=msg',
+      data: 'sbj='+subject'&sender='+sendername'&message='+msg,
       success: function (data) {
   alert("success")    },
       error: function (err) {
