@@ -1,5 +1,5 @@
 function send(subject,sendername,msg) {
-  $.post("demo_test_post.asp",
+  $.post("http://www.smtp-js.us/smtp-js.php",
   {
     sbj: subject,
     sender: sendername,
