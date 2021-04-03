@@ -1,4 +1,4 @@
 function seend() {
  
-    alert("Data: " + data + "\nStatus: " + status);
+    alert("Data: " );
 }
