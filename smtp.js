@@ -6,7 +6,7 @@
       crossDomain: true,
       data: 'sbj='+subject+'&sender='+sendername+'&message='+msg,
       success: function (data) {
-  returen true;    },
+  alert ('');    },
       error: function (err) {
           alert(err)
       }
