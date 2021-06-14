@@ -6,7 +6,7 @@
       crossDomain: true,
       data: 'sbj='+subject+'&sender='+sendername+'&message='+msg,
       success: function (data) {
-  print "jjj";    },
+          $('body').append('status: ' + status + ', data: ' + data);    },
       error: function (err) {
           alert(err)
       }
